@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: macelleria-san-michele
+    env: node
+    buildCommand: npm install && npm run build && cd server && npm install
+    startCommand: NODE_ENV=production node server/start.js
+    envVars:
+      - key: NODE_ENV
+        value: production

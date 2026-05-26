@@ -1,122 +1,95 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState, useContext, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/layout/Header.jsx';
+import Footer from './components/layout/Footer.jsx';
+import Home from './pages/Home.jsx';
+import Catalog from './pages/Catalog.jsx';
+import Product from './pages/Product.jsx';
+import Cart from './pages/Cart.jsx';
+import Checkout from './pages/Checkout.jsx';
+import OrderConfirm from './pages/OrderConfirm.jsx';
+import Reviews from './pages/Reviews.jsx';
+import Contacts from './pages/Contacts.jsx';
+import Orders from './pages/Orders.jsx';
+import LoginModal from './components/ui/LoginModal.jsx';
+import { CartContext } from './context/CartContext.jsx';
+import { AuthContext } from './context/AuthContext.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+// Toast per il carrello
+function Toast() {
+  const { toast } = useContext(CartContext);
+  if (!toast.visible) return null;
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    <div className="fixed bottom-6 right-6 z-50 bg-bordeaux text-white px-5 py-3 rounded-lg shadow-xl text-sm font-medium">
+      {toast.message}
+    </div>
+  );
 }
 
-export default App
+// Banner non invasivo per utenti non autenticati
+function LoginBanner() {
+  const { user, setShowLoginModal } = useContext(AuthContext);
+  const [dismissed, setDismissed] = useState(
+    () => sessionStorage.getItem('loginBannerDismissed') === 'true'
+  );
+
+  if (user || dismissed) return null;
+
+  return (
+    <div className="fixed top-16 left-0 right-0 z-40 flex justify-center px-4 pt-2 pointer-events-none">
+      <div className="bg-white dark:bg-[#1E1E1E] border border-edge dark:border-[#333333] shadow-md rounded-lg px-4 py-2.5 flex items-center gap-3 pointer-events-auto max-w-lg w-full">
+        <svg className="text-gold flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="2" strokeLinecap="round">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <p className="text-sm text-[#555555] dark:text-[#A0A0A0] flex-1 leading-snug">
+          Accedi o registrati per poter aggiungere prodotti al carrello
+        </p>
+        <button
+          onClick={() => setShowLoginModal(true)}
+          className="flex-shrink-0 text-sm font-medium text-bordeaux hover:underline"
+        >
+          Accedi
+        </button>
+        <button
+          onClick={() => {
+            setDismissed(true);
+            sessionStorage.setItem('loginBannerDismissed', 'true');
+          }}
+          className="flex-shrink-0 text-[#888888] hover:text-bordeaux transition-colors p-0.5"
+          aria-label="Chiudi avviso"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div className="min-h-screen bg-cream dark:bg-[#111111] flex flex-col transition-colors duration-200">
+      <Header />
+      <LoginBanner />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/catalogo" element={<Catalog />} />
+          <Route path="/prodotto/:id" element={<Product />} />
+          <Route path="/carrello" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/ordine-confermato" element={<OrderConfirm />} />
+          <Route path="/ordini" element={<Orders />} />
+          <Route path="/recensioni" element={<Reviews />} />
+          <Route path="/contatti" element={<Contacts />} />
+        </Routes>
+      </main>
+      <Footer />
+      <Toast />
+      <LoginModal />
+    </div>
+  );
+}
+
+export default App;
