@@ -29,8 +29,8 @@ app.use('/api/seed', require('./routes/seed'));
 if (process.env.NODE_ENV === 'production') {
   const distPath = path.join(__dirname, '../dist');
   app.use(express.static(distPath));
-  // Tutte le rotte non-API vanno a React Router
-  app.get('*', (req, res) => {
+  // Tutte le rotte non-API vanno a React Router (regex per Express 5)
+  app.get(/.*/, (req, res) => {
     res.sendFile(path.join(distPath, 'index.html'));
   });
 }
