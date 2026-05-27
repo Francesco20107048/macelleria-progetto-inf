@@ -102,7 +102,7 @@ export default function Header() {
             <span className="font-serif text-white text-lg font-normal tracking-wide whitespace-nowrap">
               Il Macellaio di San Michele
             </span>
-            <span className="text-white/60 text-xs tracking-widest uppercase">Napoli</span>
+            <span className="text-white/60 text-xs tracking-widest uppercase">Ischia</span>
           </Link>
 
           {/* Barra di ricerca */}
@@ -230,7 +230,7 @@ export default function Header() {
             </button>
             <div className="mb-6">
               <p className="font-serif text-white text-lg">Il Macellaio di San Michele</p>
-              <p className="text-white/50 text-xs uppercase tracking-widest">Napoli</p>
+              <p className="text-white/50 text-xs uppercase tracking-widest">Ischia</p>
             </div>
             <form onSubmit={handleSearch} className="mb-6">
               <input

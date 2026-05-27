@@ -27,7 +27,7 @@ export default function Footer() {
           </h3>
           <address className="not-italic space-y-2 text-sm">
             <p>Via San Michele, 14</p>
-            <p>80100 Napoli (NA)</p>
+            <p>80077 Ischia (NA)</p>
             <p className="mt-3">
               <a href="tel:+390811234567" className="hover:text-white transition-colors">
                 +39 081 123 4567

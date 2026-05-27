@@ -100,7 +100,7 @@ export default function Contacts() {
             <InfoRow
               icon={<MapIcon />}
               label="Indirizzo"
-              value="Via San Michele, 14 – 80100 Napoli (NA)"
+              value="Via San Michele, 14 – 80077 Ischia (NA)"
             />
             <InfoRow
               icon={<PhoneIcon />}
@@ -137,7 +137,7 @@ export default function Contacts() {
           {/* Mappa placeholder */}
           <div className="rounded-xl overflow-hidden border border-edge dark:border-[#333333] bg-gray-100 dark:bg-[#2A2A2A] h-52 flex flex-col items-center justify-center gap-2">
             <span className="text-bordeaux"><MapIcon /></span>
-            <p className="text-[#888888] dark:text-[#777777] text-sm">Via San Michele, 14 – Napoli</p>
+            <p className="text-[#888888] dark:text-[#777777] text-sm">Via San Michele, 14 – Ischia</p>
             <p className="text-xs text-[#888888] dark:text-[#666666]">Mappa non disponibile in versione dimostrativa</p>
           </div>
         </div>

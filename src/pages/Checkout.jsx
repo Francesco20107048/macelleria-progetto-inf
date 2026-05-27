@@ -268,8 +268,8 @@ export default function Checkout() {
           <div className="grid grid-cols-1 gap-4">
             <Input label="Via e numero civico *" id="address" value={form.address} onChange={set('address')} error={errors.address} placeholder="Via Roma 1" />
             <div className="grid grid-cols-2 gap-4">
-              <Input label="Citta *" id="city" value={form.city} onChange={set('city')} error={errors.city} placeholder="Napoli" />
-              <Input label="CAP *" id="zip" value={form.zip} onChange={set('zip')} error={errors.zip} placeholder="80100" />
+              <Input label="Citta *" id="city" value={form.city} onChange={set('city')} error={errors.city} placeholder="Ischia" />
+              <Input label="CAP *" id="zip" value={form.zip} onChange={set('zip')} error={errors.zip} placeholder="80077" />
             </div>
             <div>
               <label htmlFor="notes" className="block text-sm font-medium text-[#1A1A1A] dark:text-[#F0EDE8] mb-1">

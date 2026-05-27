@@ -51,7 +51,7 @@ export default function Home() {
             Il Macellaio di San Michele
           </h1>
           <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
-            Carne fresca di prima qualita, tagliata a mano ogni giorno secondo l'antica tradizione napoletana
+            Carne fresca di prima qualita, tagliata a mano ogni giorno secondo l'antica tradizione ischitana
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
@@ -168,7 +168,7 @@ export default function Home() {
           <div>
             <SectionHeader title="La nostra storia" />
             <p className="text-[#555555] dark:text-[#A0A0A0] leading-relaxed mb-4">
-              La macelleria Il Macellaio di San Michele nasce nel cuore di Napoli con un'unica
+              La macelleria Il Macellaio di San Michele nasce nel cuore di Ischia con un'unica
               missione: portare sulla vostra tavola la carne di qualita piu alta, selezionata
               direttamente dagli allevamenti italiani certificati.
             </p>
