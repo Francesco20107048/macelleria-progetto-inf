@@ -12,6 +12,7 @@ import Reviews from './pages/Reviews.jsx';
 import Contacts from './pages/Contacts.jsx';
 import Orders from './pages/Orders.jsx';
 import LoginModal from './components/ui/LoginModal.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 import { CartContext } from './context/CartContext.jsx';
 import { AuthContext } from './context/AuthContext.jsx';
 
@@ -70,6 +71,7 @@ function LoginBanner() {
 function App() {
   return (
     <div className="min-h-screen bg-cream dark:bg-[#111111] flex flex-col transition-colors duration-200">
+      <ScrollToTop />
       <Header />
       <LoginBanner />
       <main className="flex-grow">

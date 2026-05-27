@@ -22,12 +22,12 @@ const insertCategory = db.prepare(
 );
 
 const categorieData = [
-  ['Bovino', 'bovino', 'Tagli pregiati di manzo e vitello selezionati da allevamenti italiani certificati.', 'https://images.unsplash.com/photo-Pam9FIkHok4?w=800&auto=format&fit=crop&q=80'],
-  ['Suino', 'suino', 'Carne di maiale freschissima, dalle costine alla lonza, per ogni esigenza culinaria.', 'https://images.unsplash.com/photo-DxJvLtab4ak?w=800&auto=format&fit=crop&q=80'],
-  ['Ovino', 'ovino', 'Agnello e pecora da allevamenti allo stato semibrado dei pascoli appenninici.', 'https://images.unsplash.com/photo-cvj-7TZjvA0?w=800&auto=format&fit=crop&q=80'],
-  ['Pollame', 'pollame', 'Pollo, tacchino e altri volatili da allevamento a terra, senza antibiotici.', 'https://images.unsplash.com/photo-9zLa37VNL38?w=800&auto=format&fit=crop&q=80'],
-  ['Salumi', 'salumi', 'Salumi artigianali e affettati di alta qualità dalla tradizione italiana.', 'https://images.unsplash.com/photo-m_N0Q_lwxZ0?w=800&auto=format&fit=crop&q=80'],
-  ['Speciali', 'speciali', 'Carni di selvaggina e razze rare per palati raffinati e cene speciali.', 'https://images.unsplash.com/photo-qXrrbHUzmkE?w=800&auto=format&fit=crop&q=80'],
+  ['Bovino', 'bovino', 'Tagli pregiati di manzo e vitello selezionati da allevamenti italiani certificati.', 'https://images.unsplash.com/photo-1695088224287-bb10a886fce4?w=800&auto=format&fit=crop&q=80'],
+  ['Suino', 'suino', 'Carne di maiale freschissima, dalle costine alla lonza, per ogni esigenza culinaria.', 'https://images.unsplash.com/photo-1547050605-2f268cd5daf0?w=800&auto=format&fit=crop&q=80'],
+  ['Ovino', 'ovino', 'Agnello e pecora da allevamenti allo stato semibrado dei pascoli appenninici.', 'https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?w=800&auto=format&fit=crop&q=80'],
+  ['Pollame', 'pollame', 'Pollo, tacchino e altri volatili da allevamento a terra, senza antibiotici.', 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=800&auto=format&fit=crop&q=80'],
+  ['Salumi', 'salumi', 'Salumi artigianali e affettati di alta qualità dalla tradizione italiana.', 'https://images.unsplash.com/photo-1542901031-ec5eeb518e83?w=800&auto=format&fit=crop&q=80'],
+  ['Speciali', 'speciali', 'Carni di selvaggina e razze rare per palati raffinati e cene speciali.', 'https://images.unsplash.com/photo-1690983320937-ca293f1d1d97?w=800&auto=format&fit=crop&q=80'],
 ];
 
 const categorieIds = {};
@@ -57,7 +57,7 @@ const prodottiData = [
     cooking_tip: 'Grigliate a fuoco vivo per 3-4 minuti per lato. Temperatura interna consigliata 55°C per cottura al sangue. Lasciate riposare 3 minuti prima di servire.',
     stock_kg: 80,
     featured: 1,
-    image_url: 'https://images.unsplash.com/photo-MEnlQv-EQvY?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1606677661991-446cea8ee182?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'bovino',
@@ -69,7 +69,7 @@ const prodottiData = [
     cooking_tip: 'Cuocete in padella con burro chiarificato e rosmarino, oppure preparatelo in crosta. Non superate i 58°C interni per mantenerne la tenerezza assoluta.',
     stock_kg: 40,
     featured: 1,
-    image_url: 'https://images.unsplash.com/photo-YlAmh_X_SsE?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'bovino',
@@ -81,7 +81,7 @@ const prodottiData = [
     cooking_tip: 'Grigliate su brace ardente, almeno 4 minuti per lato. Portate la carne a temperatura ambiente 30 minuti prima della cottura. Lasciate riposare 5 minuti prima di servire.',
     stock_kg: 60,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-1rEKYxooCh4?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1597417175478-c161c1788242?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'bovino',
@@ -93,7 +93,7 @@ const prodottiData = [
     cooking_tip: 'Per un ragù perfetto, rosolate a fuoco alto prima di aggiungere il pomodoro. Cuocete le polpette in forno a 180°C per 20 minuti dopo averle dorate in padella.',
     stock_kg: 100,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-_ETocJt6ZBc?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1596895404493-2b74961c0cc4?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'bovino',
@@ -105,7 +105,7 @@ const prodottiData = [
     cooking_tip: 'Brasate lentamente con vino bianco secco, brodo, carote e sedano per almeno 90 minuti a fuoco dolce. Completate con la gremolata tradizionale di limone, aglio e prezzemolo.',
     stock_kg: 50,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-lvmFFcLvHl8?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1603048374877-b98f840ad441?w=800&auto=format&fit=crop&q=80',
   },
   // SUINO
   {
@@ -118,7 +118,7 @@ const prodottiData = [
     cooking_tip: 'Marinate per almeno 4 ore con paprika affumicata, aglio, miele e salsa di soia. Cuocete in forno a 160°C per 2 ore coperte con carta stagnola, poi finite alla griglia.',
     stock_kg: 90,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-Qu3ijhlytzg?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1606157715813-aceb0ffb810e?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'suino',
@@ -130,7 +130,7 @@ const prodottiData = [
     cooking_tip: 'Marinate con limone, aglio e origano per un\'ora, poi cuocete alla griglia o in padella con un filo d\'olio extravergine. Per la versione napoletana, farcite e cuocete nel sugo di pomodoro per 2 ore.',
     stock_kg: 70,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-PytneMLhCXs?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1579636858754-c1048da9c361?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'suino',
@@ -142,7 +142,7 @@ const prodottiData = [
     cooking_tip: 'Affettate sottile e servite cruda con formaggi stagionati e miele. Rosolata in padella arricchisce sughi di pasta, zuppe e risotti con il suo grasso profumato.',
     stock_kg: 45,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-ZB3tyyQq1gs?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1606851685679-2a35cfdd62d6?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'suino',
@@ -154,7 +154,7 @@ const prodottiData = [
     cooking_tip: 'Arrostitela intera a 180°C per 45 minuti, oppure tagliatela a fette e cuocetela in padella con vino bianco, salvia e rosmarino. Ottima anche in agrodolce con cipolle.',
     stock_kg: 65,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-Ssb24Sick7E?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1588347785102-2944ba63d0c3?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'suino',
@@ -166,7 +166,7 @@ const prodottiData = [
     cooking_tip: 'Cuocete sulla griglia o in padella bucherellando leggermente la pelle per evitare che scoppi. Eccellente spezzata nel ragù napoletano o abbinata ai friarielli saltati in padella.',
     stock_kg: 85,
     featured: 1,
-    image_url: 'https://images.unsplash.com/photo-cSxpCQrRlo8?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1585325701165-351af916e581?w=800&auto=format&fit=crop&q=80',
   },
   // OVINO
   {
@@ -179,7 +179,7 @@ const prodottiData = [
     cooking_tip: 'Steccate con spicchi di aglio e rametti di rosmarino, ungete con olio extravergine e cuocete a 180°C per 25 minuti ogni 500g. Sfumate con vino bianco secco a metà cottura.',
     stock_kg: 55,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-f6rf4VaQK9Q?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1700478934593-7739ef5eba6d?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'ovino',
@@ -191,7 +191,7 @@ const prodottiData = [
     cooking_tip: 'Grigliate a fuoco vivo per 3 minuti per lato dopo averle marinate con olio, aglio, rosmarino e timo fresco. Servite con patate al forno e un filo di limone.',
     stock_kg: 40,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-8IQlsHB2OS8?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1602470521006-59ab77068b0d?w=800&auto=format&fit=crop&q=80',
   },
   // POLLAME
   {
@@ -204,7 +204,7 @@ const prodottiData = [
     cooking_tip: 'Battete le fette a 1 cm di spessore e cuocete in padella con limone e capperi. Tagliate a cubetti per spiedini misti, oppure preparatelo in scaloppine con marsala.',
     stock_kg: 120,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-9ZrWR8R961U?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1633096013004-e2cb4023b560?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'pollame',
@@ -216,7 +216,7 @@ const prodottiData = [
     cooking_tip: 'Cuocete in umido con pomodori pelati, olive nere e capperi per 45 minuti. In forno a 200°C per 40 minuti con verdure di stagione, vino bianco e erbe aromatiche.',
     stock_kg: 100,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-DNQLBdGdld0?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'pollame',
@@ -228,7 +228,7 @@ const prodottiData = [
     cooking_tip: 'Massaggiate con burro aromatizzato con limone, aglio e rosmarino. Arrostitelo a 190°C per circa 20 minuti ogni 500g. Lasciate riposare 10 minuti prima di tagliare.',
     stock_kg: 60,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-oqZ7gu3ytDg?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1672787153720-e85fe802fd9f?w=800&auto=format&fit=crop&q=80',
   },
   // SALUMI
   {
@@ -241,7 +241,7 @@ const prodottiData = [
     cooking_tip: 'Affettate a fette di circa 3mm e servite a temperatura ambiente. Eccellente su pizza, in panini rustici o come antipasto con pane cafone, provolone del monaco e olive di Gaeta.',
     stock_kg: 30,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-1e5n4AU05Lk?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1558652430-2fc0f04080b6?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'salumi',
@@ -253,7 +253,7 @@ const prodottiData = [
     cooking_tip: 'Affettate a mano con coltello affilato per ottenere fette sottilissime e trasparenti. Servite a temperatura ambiente con melone estivo, fichi freschi o grissini artigianali.',
     stock_kg: 25,
     featured: 1,
-    image_url: 'https://images.unsplash.com/photo-P7Um6_hkwbU?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1560883389-3bd36d16d021?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'salumi',
@@ -265,7 +265,7 @@ const prodottiData = [
     cooking_tip: 'Servite a fette spesse o in cubetti come antipasto, oppure tagliatela sottilissima per panini e tramezzini. Ottima anche riscaldata e abbinata a crescentine fritte o tigelle.',
     stock_kg: 35,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-475tDPr9FRQ?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1560781290-7dc94c0f8f4f?w=800&auto=format&fit=crop&q=80',
   },
   // SPECIALI
   {
@@ -278,7 +278,7 @@ const prodottiData = [
     cooking_tip: 'Frollate la carne per 24 ore in frigorifero. Marinate con vino rosso corposo, alloro, ginepro e pepe per almeno 12 ore prima di cuocere in umido per 2-3 ore a fuoco lento.',
     stock_kg: 20,
     featured: 1,
-    image_url: 'https://images.unsplash.com/photo--47X0XodINg?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1690983323238-0b91789e1b5a?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'speciali',
@@ -290,7 +290,7 @@ const prodottiData = [
     cooking_tip: 'Cuocete il filetto a 54°C al cuore per un risultato tenero e rosato. Per spezzatini e stufati, cuocete a fuoco lentissimo per almeno 2 ore con verdure radice e vino rosso corposo.',
     stock_kg: 15,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-AQ_BdsvLgqA?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1613454320437-0c228c8b1723?w=800&auto=format&fit=crop&q=80',
   },
 ];
 
