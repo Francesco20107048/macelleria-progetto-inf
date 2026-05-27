@@ -77,6 +77,7 @@ function InstagramIcon() {
 
 
 export default function Header() {
+  const { itemCount } = useCart();
   const { user, logout, setShowLoginModal } = useAuth();
   const { dark, toggle } = useTheme();
   const navigate = useNavigate();
