@@ -76,6 +76,16 @@ router.post('/logout', (req, res) => {
   res.json({ success: true });
 });
 
+// GET /api/auth/users  (richiede header X-Admin-Secret)
+router.get('/users', (req, res) => {
+  const secret = process.env.ADMIN_SECRET;
+  if (!secret || req.headers['x-admin-secret'] !== secret) {
+    return res.status(403).json({ error: 'Accesso negato' });
+  }
+  const users = db.prepare('SELECT id, name, email, created_at FROM users ORDER BY created_at DESC').all();
+  res.json(users);
+});
+
 // GET /api/auth/verify
 router.get('/verify', (req, res) => {
   const token = (req.headers.authorization || '').replace('Bearer ', '');
