@@ -270,6 +270,18 @@ const prodottiData = [
   // SPECIALI
   {
     slug: 'speciali',
+    name: 'Carne di Cherif',
+    description: 'Taglio rarissimo e introvabile, proveniente direttamente dall\'aula scolastica. La carne di Cherif è considerata la più pregiata della categoria Speciali: tenera, saporita, con un retrogusto di ragù domenicale. Disponibile in quantità limitatissime. Chi la assaggia non torna più indietro.',
+    price_per_kg: 999.99,
+    origin: 'Italia - Ischia (aula terza fila)',
+    cut_type: 'Taglio unico',
+    cooking_tip: 'Meglio non cuocerla affatto. Servitela a temperatura ambiente con una spruzzata di limone e tanto rispetto. Abbinamento consigliato: lacrime del macellaio.',
+    stock_kg: 1,
+    featured: 1,
+    image_url: '/cherif.jpg',
+  },
+  {
+    slug: 'speciali',
     name: 'Cinghiale',
     description: 'Carne di cinghiale proveniente dalla caccia controllata e regolamentata nelle foreste appenniniche toscane. Dal sapore deciso e selvatico, è ricca di proteine e povera di grassi saturi. Ogni pezzo è tracciato, controllato sanitariamente e garantito per qualità e sicurezza alimentare.',
     price_per_kg: 22.90,
