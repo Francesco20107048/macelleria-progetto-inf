@@ -324,7 +324,7 @@ const recensioniProdotto = [
   { prodotto: 'Costata di manzo', author: 'Francesco Loria', rating: 5, comment: 'Costata alla griglia con sale grosso e rosmarino, un\'esperienza gastronomica indimenticabile. La qualità della carne fa davvero tutta la differenza.' },
   { prodotto: 'Petto di pollo', author: 'Elena Vitali', rating: 3, comment: 'Prodotto buono e fresco, niente da dire sulla qualità. Forse mi aspettavo qualcosa di più speciale per il prezzo, ma è comunque superiore alla media.' },
   { prodotto: 'Cosciotto di agnello', author: 'Nicola Esposito', rating: 5, comment: 'Agnello tenero e saporito, perfetto per la grigliata di Ferragosto in famiglia. Tutti i presenti hanno chiesto dove lo avevo acquistato. Qualità eccezionale.' },
-  { prodotto: 'Salame napoletano', author: 'Concetta Russo', rating: 5, comment: 'Il salame napoletano più buono di Napoli, con il giusto equilibrio tra le spezie e il pepe in grani che si sente al morso. Autentica tradizione partenopea.' },
+  { prodotto: 'Salame napoletano', author: 'Concetta Russo', rating: 5, comment: 'Il salame napoletano più buono di Ischia, con il giusto equilibrio tra le spezie e il pepe in grani che si sente al morso. Autentica tradizione partenopea.' },
   { prodotto: 'Lonza di maiale', author: 'Giuseppe Amato', rating: 4, comment: 'Ottima lonza, l\'ho cucinata in umido con vino bianco e il risultato è stato eccellente. Carne tenera, ben sapida e priva di grassi eccessivi.' },
   { prodotto: 'Cervo', author: 'Alessandra Bruno', rating: 5, comment: 'Prima volta che assaggiavo la carne di cervo e sono rimasta piacevolmente stupita dalla qualità. Sapore delicato, texture pregiata, niente della selvatichezza che temevo.' },
 ];
@@ -343,7 +343,7 @@ const insertShopReview = db.prepare(
 );
 
 const recensioniNegozio = [
-  { author: 'Marco Esposito', rating: 5, comment: 'La migliore macelleria di Napoli, senza alcun dubbio. La carne è sempre freschissima e i consigli del macellaio sono preziosi e competenti. Il filetto di manzo che ho acquistato la settimana scorsa era di una qualità che non ricordavo di aver mai assaggiato prima.' },
+  { author: 'Marco Esposito', rating: 5, comment: 'La migliore macelleria di Ischia, senza alcun dubbio. La carne è sempre freschissima e i consigli del macellaio sono preziosi e competenti. Il filetto di manzo che ho acquistato la settimana scorsa era di una qualità che non ricordavo di aver mai assaggiato prima.' },
   { author: 'Giulia Ferraro', rating: 5, comment: 'Frequento questa macelleria da anni e non la cambierei con nessun\'altra. La qualità è sempre costante, il personale è gentilissimo e i prezzi sono più che onesti per quello che offrono. Consiglio a tutti la salsiccia fresca.' },
   { author: 'Antonio Russo', rating: 4, comment: 'Ottima macelleria con carne di prima scelta. Apprezzo la tracciabilità dei prodotti e la competenza del personale. Nei weekend c\'è un po\' di attesa, ma ne vale assolutamente la pena.' },
   { author: 'Maria Sorrentino', rating: 5, comment: 'Finalmente una macelleria che sa ancora cosa significa qualità artigianale! Il cosciotto di agnello che ho preso per Pasqua era di una bontà straordinaria. Grazie a tutto il personale per la gentilezza e la professionalità.' },
@@ -353,7 +353,7 @@ const recensioniNegozio = [
   { author: 'Rosa Pagano', rating: 5, comment: 'Ho scoperto questa macelleria per caso e non la lascio più. Il prosciutto crudo è di una qualità straordinaria, e la mortadella artigianale è semplicemente la migliore che abbia mai assaggiato in vita mia.' },
   { author: 'Salvatore Fontana', rating: 3, comment: 'Carne buona, non lo metto assolutamente in discussione. La settimana scorsa però ho trovato il banco un po\' meno fornito del solito e ho dovuto rinunciare all\'ossobuco. Spero sia una cosa temporanea.' },
   { author: 'Teresa Lombardi', rating: 5, comment: 'Servizio impeccabile e prodotti di altissima qualità. Ho assaggiato per la prima volta la carne di cervo e sono rimasta piacevolmente stupita. Il macellaio ha saputo consigliarmi la cottura perfetta e il risultato è stato fantastico.' },
-  { author: 'Gennaro Esposito', rating: 4, comment: 'Buona qualità generale, prezzi onesti per Napoli. Apprezzo molto la possibilità di ordinare tagli particolari con un giorno di anticipo. L\'ossobuco di vitello che preparo ogni domenica è sempre perfetto grazie alla carne di qualità.' },
+  { author: 'Gennaro Esposito', rating: 4, comment: 'Buona qualità generale, prezzi onesti per Ischia. Apprezzo molto la possibilità di ordinare tagli particolari con un giorno di anticipo. L\'ossobuco di vitello che preparo ogni domenica è sempre perfetto grazie alla carne di qualità.' },
   { author: 'Filomena Caruso', rating: 5, comment: 'Macelleria storica del quartiere San Michele, ci vengo con mia madre da quando ero bambina. La qualità non è mai calata negli anni, anzi è migliorata. Il pollo intero che prendo ogni settimana è sempre freschissimo e saporito come una volta.' },
 ];
 
