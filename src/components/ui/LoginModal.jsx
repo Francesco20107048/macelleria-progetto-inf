@@ -217,19 +217,6 @@ export default function LoginModal() {
             {loading ? 'Attendere...' : tab === 'accedi' ? 'Accedi' : 'Crea account'}
           </button>
         </form>
-
-        {tab === 'accedi' && (
-          <p className="text-center text-xs text-[#888888] mt-4">
-            Credenziali demo:{' '}
-            <button
-              type="button"
-              onClick={() => setForm((f) => ({ ...f, email: 'mario@test.it', password: 'password123' }))}
-              className="text-bordeaux hover:underline"
-            >
-              mario@test.it / password123
-            </button>
-          </p>
-        )}
       </div>
     </div>
   );
