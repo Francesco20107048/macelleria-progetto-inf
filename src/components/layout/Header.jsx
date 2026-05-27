@@ -65,7 +65,17 @@ function MoonIcon() {
   );
 }
 
-export default function Header() {
+function InstagramIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+    </svg>
+  );
+}
+
+
   const { itemCount } = useCart();
   const { user, logout, setShowLoginModal } = useAuth();
   const { dark, toggle } = useTheme();
@@ -98,12 +108,23 @@ export default function Header() {
         <div className="max-w-7xl mx-auto h-full px-4 flex items-center gap-4">
 
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0 flex flex-col leading-tight">
-            <span className="font-serif text-white text-lg font-normal tracking-wide whitespace-nowrap">
-              Il Macellaio di San Michele
-            </span>
-            <span className="text-white/60 text-xs tracking-widest uppercase">Ischia</span>
-          </Link>
+          <div className="flex-shrink-0 flex items-center gap-2">
+            <Link to="/" className="flex flex-col leading-tight">
+              <span className="font-serif text-white text-lg font-normal tracking-wide whitespace-nowrap">
+                Il Macellaio di San Michele
+              </span>
+              <span className="text-white/60 text-xs tracking-widest uppercase">Ischia</span>
+            </Link>
+            <a
+              href="https://www.instagram.com/il_macellaio_di_sanmichele?igsh=Nmtzam9hc3J4YW9m"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 hover:text-white transition-colors mt-0.5"
+              aria-label="Instagram"
+            >
+              <InstagramIcon />
+            </a>
+          </div>
 
           {/* Barra di ricerca */}
           <form onSubmit={handleSearch} className="flex-1 max-w-sm mx-auto hidden md:block">
@@ -229,7 +250,18 @@ export default function Header() {
               <CloseIcon />
             </button>
             <div className="mb-6">
-              <p className="font-serif text-white text-lg">Il Macellaio di San Michele</p>
+              <div className="flex items-center gap-2">
+                <p className="font-serif text-white text-lg">Il Macellaio di San Michele</p>
+                <a
+                  href="https://www.instagram.com/il_macellaio_di_sanmichele?igsh=Nmtzam9hc3J4YW9m"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-white transition-colors"
+                  aria-label="Instagram"
+                >
+                  <InstagramIcon />
+                </a>
+              </div>
               <p className="text-white/50 text-xs uppercase tracking-widest">Ischia</p>
             </div>
             <form onSubmit={handleSearch} className="mb-6">
