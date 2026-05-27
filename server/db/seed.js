@@ -241,7 +241,7 @@ const prodottiData = [
     cooking_tip: 'Affettate a fette di circa 3mm e servite a temperatura ambiente. Eccellente su pizza, in panini rustici o come antipasto con pane cafone, provolone del monaco e olive di Gaeta.',
     stock_kg: 30,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-1558652430-2fc0f04080b6?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1460122109654-7e46ab4fc9b9?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'salumi',
@@ -253,7 +253,7 @@ const prodottiData = [
     cooking_tip: 'Affettate a mano con coltello affilato per ottenere fette sottilissime e trasparenti. Servite a temperatura ambiente con melone estivo, fichi freschi o grissini artigianali.',
     stock_kg: 25,
     featured: 1,
-    image_url: 'https://images.unsplash.com/photo-1560883389-3bd36d16d021?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1640703935633-ca20bef6c38f?w=800&auto=format&fit=crop&q=80',
   },
   {
     slug: 'salumi',
@@ -265,7 +265,7 @@ const prodottiData = [
     cooking_tip: 'Servite a fette spesse o in cubetti come antipasto, oppure tagliatela sottilissima per panini e tramezzini. Ottima anche riscaldata e abbinata a crescentine fritte o tigelle.',
     stock_kg: 35,
     featured: 0,
-    image_url: 'https://images.unsplash.com/photo-1560781290-7dc94c0f8f4f?w=800&auto=format&fit=crop&q=80',
+    image_url: 'https://images.unsplash.com/photo-1607756794535-ba48a526b73a?w=800&auto=format&fit=crop&q=80',
   },
   // SPECIALI
   {
