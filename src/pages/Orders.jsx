@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext.jsx';
+import { getOrders } from '../api/api.js';
 
 const METODO_LABELS = {
   carta: 'Carta di credito',
@@ -119,11 +120,7 @@ export default function Orders() {
       return;
     }
 
-    fetch(`/api/orders?email=${encodeURIComponent(user.email)}`)
-      .then((r) => {
-        if (!r.ok) throw new Error('Errore nel caricamento degli ordini');
-        return r.json();
-      })
+    getOrders()
       .then(setOrders)
       .catch((e) => setError(e.message))
       .finally(() => setLoading(false));

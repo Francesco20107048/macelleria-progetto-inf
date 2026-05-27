@@ -45,26 +45,33 @@ export default function Product() {
   const [reviewSending, setReviewSending] = useState(false);
 
   useEffect(() => {
+    const controller = new AbortController();
+
     setLoading(true);
     setImgError(false);
     setQuantity(0.5);
 
     getProduct(id)
       .then((p) => {
+        if (controller.signal.aborted) return;
         setProduct(p);
         return Promise.all([
           getProductReviews(id),
           getProducts({ category: p.category_slug }),
         ]);
       })
-      .then(([rev, rel]) => {
+      .then((results) => {
+        if (!results || controller.signal.aborted) return;
+        const [rev, rel] = results;
         setReviews(rev);
         setRelated(rel.filter((p) => p.id !== Number(id)).slice(0, 4));
         setLoading(false);
       })
       .catch(() => {
-        setLoading(false);
+        if (!controller.signal.aborted) setLoading(false);
       });
+
+    return () => controller.abort();
   }, [id]);
 
   const handleDecrement = () => {

@@ -51,6 +51,11 @@ export const postShopReview = (body) =>
   });
 
 // Ordini
+export const getOrders = () =>
+  fetchJson(`${BASE}/orders`, {
+    headers: { ...authHeaders() },
+  });
+
 export const createOrder = (body) =>
   fetchJson(`${BASE}/orders`, {
     method: 'POST',

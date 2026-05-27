@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../db/schema');
+const requireAuth = require('../middleware/auth');
 
 // POST /api/orders
 router.post('/', (req, res) => {
@@ -75,16 +76,13 @@ router.post('/', (req, res) => {
   }
 });
 
-// GET /api/orders?email=xxx  — storico ordini per email
-router.get('/', (req, res) => {
-  const { email } = req.query;
-  if (!email || !email.trim()) {
-    return res.status(400).json({ error: 'Il parametro email è obbligatorio' });
-  }
+// GET /api/orders  — storico ordini dell'utente autenticato
+router.get('/', requireAuth, (req, res) => {
+  const email = req.user.email;
 
   const orders = db.prepare(
     'SELECT * FROM orders WHERE LOWER(email) = LOWER(?) ORDER BY created_at DESC'
-  ).all(email.trim());
+  ).all(email);
 
   const getItems = db.prepare(`
     SELECT oi.quantity_kg, oi.price_per_kg,
