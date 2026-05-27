@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         bordeaux: {
-          DEFAULT: 'rgb(107 15 26 / <alpha-value>)',
+          DEFAULT: 'rgb(var(--bordeaux) / <alpha-value>)',
           dark: 'rgb(74 10 18 / <alpha-value>)',
         },
         gold: {
