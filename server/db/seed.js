@@ -314,7 +314,7 @@ const prodottiData = [
     cooking_tip: 'Marinate con estratto di Void per almeno 4 ore per neutralizzare il residuo di Kuva. Cuocete a 200°C per 30 minuti oppure colpite ripetutamente con una lama Nikana finché non raggiunge la cottura desiderata. Accompagnate con purè di Orokin e salsa al Forma.',
     stock_kg: 2,
     featured: 1,
-    image_url: 'https://static.wikia.nocookie.net/warframe/images/4/47/GrineerSoldier.png',
+    image_url: 'https://static.wikia.nocookie.net/warframe/images/6/64/Grineer.png/revision/latest?cb=20121103152534',
   },
 ];
 
