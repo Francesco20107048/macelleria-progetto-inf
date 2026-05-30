@@ -314,6 +314,18 @@ const prodottiData = [
   },
   {
     slug: 'speciali',
+    name: 'Bojason',
+    description: 'Taglio leggendario ottenuto dall\'esemplare più grasso mai avvistato nelle pianure della Lombardia. Bojason, soprannominato "Il Colosso del Mercato", è famoso per la sua straordinaria percentuale di grasso intramuscolare — la più alta mai registrata dalla scienza della macelleria moderna. Ogni fetta è una valanga di lipidi pregiati che si sciolgono letteralmente in bocca. Certificato dall\'Istituto Nazionale del Colesterolo. Disponibile in tagli da minimo 5 kg perché sotto quella soglia non si sente.',
+    price_per_kg: 3.50,
+    origin: 'Pianure Padane — zona Bojason',
+    cut_type: 'Pancia extra large',
+    cooking_tip: 'Non serve aggiungere olio. Non serve aggiungere burro. Non serve aggiungere nient\'altro — Bojason è già tutto. Cuocete a fuoco bassissimo per 3 ore e usate il grasso che cola per condire il resto della settimana.',
+    stock_kg: 500,
+    featured: 1,
+    image_url: 'https://c8.alamy.com/compit/c7k6me/uomo-molto-grasso-con-nastro-di-misurazione-c7k6me.jpg',
+  },
+  {
+    slug: 'speciali',
     name: 'Carne di Grineer',
     description: 'Taglio rarissimo ottenuto da esemplari di Grineer catturati nelle piane di Ceres durante operazioni di caccia autorizzate dall\'Arbitro dei Concorsi. La carne, di colore rosso scuro con striature metalliche dovute alle modifiche cibernetiche, presenta una consistenza unica e un sapore deciso con retrogusto di polvere da sparo. Ogni pezzo è certificato dal Codex ed è completamente privo di Kuva — testato e garantito. Disponibile in quantità limitatissime: i Tenno si riforniscono regolarmente.',
     price_per_kg: 7.00,
@@ -359,6 +371,8 @@ const recensioniProdotto = [
   { prodotto: 'Salame napoletano', author: 'Concetta Russo', rating: 5, comment: 'Il salame napoletano più buono di Ischia, con il giusto equilibrio tra le spezie e il pepe in grani che si sente al morso. Autentica tradizione partenopea.' },
   { prodotto: 'Lonza di maiale', author: 'Giuseppe Amato', rating: 4, comment: 'Ottima lonza, l\'ho cucinata in umido con vino bianco e il risultato è stato eccellente. Carne tenera, ben sapida e priva di grassi eccessivi.' },
   { prodotto: 'Cervo', author: 'Alessandra Bruno', rating: 5, comment: 'Prima volta che assaggiavo la carne di cervo e sono rimasta piacevolmente stupita dalla qualità. Sapore delicato, texture pregiata, niente della selvatichezza che temevo.' },
+  { prodotto: 'Bojason', author: 'Il Cardiologo', rating: 1, comment: 'Ho visitato un cliente che aveva mangiato 2 kg di Bojason a cena. Ora è mio paziente abituale. Detto questo, la cottura era perfetta.' },
+  { prodotto: 'Bojason', author: 'Nutrizionista Anonima', rating: 5, comment: 'Finalmente una fonte di grassi saturi onesta. Niente fuffa, niente marketing — solo puro Bojason. I miei clienti mi odiano ma io lo ricompro ogni settimana.' },
   { prodotto: 'Carne di Grineer', author: 'Excalibur Prime', rating: 5, comment: 'Finalmente una macelleria che capisce le mie esigenze. Ho comprato 1 kg dopo la missione su Ceres e ho cucinato un arrosto con salsa al Forma. I miei compagni Tenno erano entusiasti. Unica pecca: il residuo di Kuva era ancora un po\' alto ma niente che una buona marinatura non risolva.' },
   { prodotto: 'Carne di Grineer', author: 'Vor il Capitano', rating: 1, comment: 'QUESTO È UN INSULTO. NESSUNO TOCCA I MIEI GRINEER. VI TROVERÒ. Comunque la cottura era un po\' al sangue.' },
 ];
