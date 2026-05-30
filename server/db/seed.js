@@ -3,6 +3,14 @@ const bcrypt = require('bcryptjs');
 
 function runSeed() {
 
+// Salva le recensioni esistenti prima di pulire il DB
+const shopReviewsBackup = db.prepare('SELECT author, rating, comment, created_at FROM shop_reviews').all();
+const productReviewsBackup = db.prepare(`
+  SELECT r.author, r.rating, r.comment, r.created_at, p.name as product_name
+  FROM reviews r
+  JOIN products p ON p.id = r.product_id
+`).all();
+
 // Pulisce il database prima di popolare
 db.exec(`
   DELETE FROM sessions;
@@ -406,6 +414,40 @@ for (const u of utentiTest) {
 console.log('Utenti di test inseriti:', utentiTest.length);
 console.log('  mario@test.it / password123');
 console.log('  giulia@test.it / password123');
+
+// --- RIPRISTINO RECENSIONI UTENTI ---
+// Reinserisce le recensioni salvate prima del seed, evitando duplicati
+
+const seedShopAuthors = new Set(recensioniNegozio.map(r => r.author + '|' + r.comment));
+let shopRestored = 0;
+for (const r of shopReviewsBackup) {
+  const key = r.author + '|' + r.comment;
+  if (!seedShopAuthors.has(key)) {
+    insertShopReview.run(r.author, r.rating, r.comment);
+    shopRestored++;
+  }
+}
+
+const insertProductReview = db.prepare(
+  'INSERT INTO reviews (product_id, author, rating, comment) VALUES (?, ?, ?, ?)'
+);
+const seedProdKeys = new Set(recensioniProdotto.map(r => r.prodotto + '|' + r.author + '|' + r.comment));
+let prodRestored = 0;
+for (const r of productReviewsBackup) {
+  const key = r.product_name + '|' + r.author + '|' + r.comment;
+  if (!seedProdKeys.has(key)) {
+    const prod = db.prepare('SELECT id FROM products WHERE name = ?').get(r.product_name);
+    if (prod) {
+      insertProductReview.run(prod.id, r.author, r.rating, r.comment);
+      prodRestored++;
+    }
+  }
+}
+
+if (shopRestored + prodRestored > 0) {
+  console.log(`Recensioni utenti ripristinate: ${shopRestored} negozio, ${prodRestored} prodotto`);
+}
+
 console.log('\nDatabase popolato con successo!');
 console.log('Prodotti in evidenza:', prodottiData.filter(p => p.featured).map(p => p.name).join(', '));
 
