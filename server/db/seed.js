@@ -304,6 +304,18 @@ const prodottiData = [
     featured: 0,
     image_url: 'https://images.unsplash.com/photo-1613454320437-0c228c8b1723?w=800&auto=format&fit=crop&q=80',
   },
+  {
+    slug: 'speciali',
+    name: 'Carne di Grineer',
+    description: 'Taglio rarissimo ottenuto da esemplari di Grineer catturati nelle piane di Ceres durante operazioni di caccia autorizzate dall\'Arbitro dei Concorsi. La carne, di colore rosso scuro con striature metalliche dovute alle modifiche cibernetiche, presenta una consistenza unica e un sapore deciso con retrogusto di polvere da sparo. Ogni pezzo è certificato dal Codex ed è completamente privo di Kuva — testato e garantito. Disponibile in quantità limitatissime: i Tenno si riforniscono regolarmente.',
+    price_per_kg: 9999.90,
+    origin: 'Sistema Solare - Ceres',
+    cut_type: 'Fibra muscolare mutata',
+    cooking_tip: 'Marinate con estratto di Void per almeno 4 ore per neutralizzare il residuo di Kuva. Cuocete a 200°C per 30 minuti oppure colpite ripetutamente con una lama Nikana finché non raggiunge la cottura desiderata. Accompagnate con purè di Orokin e salsa al Forma.',
+    stock_kg: 2,
+    featured: 1,
+    image_url: 'https://static.wikia.nocookie.net/warframe/images/4/47/GrineerSoldier.png',
+  },
 ];
 
 const prodottoIds = {};
@@ -339,6 +351,8 @@ const recensioniProdotto = [
   { prodotto: 'Salame napoletano', author: 'Concetta Russo', rating: 5, comment: 'Il salame napoletano più buono di Ischia, con il giusto equilibrio tra le spezie e il pepe in grani che si sente al morso. Autentica tradizione partenopea.' },
   { prodotto: 'Lonza di maiale', author: 'Giuseppe Amato', rating: 4, comment: 'Ottima lonza, l\'ho cucinata in umido con vino bianco e il risultato è stato eccellente. Carne tenera, ben sapida e priva di grassi eccessivi.' },
   { prodotto: 'Cervo', author: 'Alessandra Bruno', rating: 5, comment: 'Prima volta che assaggiavo la carne di cervo e sono rimasta piacevolmente stupita dalla qualità. Sapore delicato, texture pregiata, niente della selvatichezza che temevo.' },
+  { prodotto: 'Carne di Grineer', author: 'Excalibur Prime', rating: 5, comment: 'Finalmente una macelleria che capisce le mie esigenze. Ho comprato 1 kg dopo la missione su Ceres e ho cucinato un arrosto con salsa al Forma. I miei compagni Tenno erano entusiasti. Unica pecca: il residuo di Kuva era ancora un po\' alto ma niente che una buona marinatura non risolva.' },
+  { prodotto: 'Carne di Grineer', author: 'Vor il Capitano', rating: 1, comment: 'QUESTO È UN INSULTO. NESSUNO TOCCA I MIEI GRINEER. VI TROVERÒ. Comunque la cottura era un po\' al sangue.' },
 ];
 
 for (const r of recensioniProdotto) {
